@@ -1,40 +1,30 @@
-
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class RockPaperScissor {
-
-    public static void main(String args[]) {
+    public static void main() {
         Scanner sc = new Scanner(System.in);
+        String[] moves = { "Rock" , "Paper" , "Scissor"};
         int input;
-        int r = (int) (Math.floor(Math.random() * 4) + 1);
         do {
-            System.out.println("-------------------------------------------------------------");
-            System.out.print("Enter the number for choosing your move \n 1. Rock  \n 2. Paper \n 3. Scissors \n 4. Exit \n : ");
+            System.out.println("-----------------------------------------------------------------------");
+            System.out.print("Enter your move:\n1. Rock\n2. Paper\n3. Scissors\n4. Exit\n: ");
             input = sc.nextInt();
-
-            if (r == input) {
-                System.out.println("Thats a draw !");
-            } else if (input == 1 && r == 2) {
-                System.out.println("System choosen Paper You lost ! ");
-            } else if (input == 1 && r == 3) {
-                System.out.println("Sytem choosen Scissors You Won !");
-            } else if (input == 2 && r == 1) {
-                System.out.println("System choosen Rock You won !");
+            if (input == 4) break;
+            if (input < 1 || input > 3) {
+                System.out.println("Invalid input!");
+                continue;
             }
-            else if (input == 2 && r == 3) {
-                System.out.println("System choosen Scissors You lost !");
-            } 
-            else if (input == 3 && r == 1) {
-                System.out.println("System choosen Rock you lost !");
+            int r = (int) (Math.random()*3) + 1;
+            System.out.println("System choice: " + moves[r-1]);
+            if (r == input) System.out.println("Its a draw !");
+            else if (input == 1 && r == 2 || input == 2 && r == 1 || input == 3 && r == 2 ) {
+                System.out.println("You won !");
             }
-            else if (input == 3 && r == 2) {
-                System.out.println("System choosen Paper you Won !");
+            else {
+                System.out.println("You lost !");
             }
-            else if (input == 4 ) {
-                System.out.println("Exiting ..............");
-                break;
-            }
-            
-        } while (true);
+        }
+        while(true);
     }
 }
