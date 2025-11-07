@@ -1,9 +1,5 @@
-package Practice;
-
 import java.util.Scanner;
-
 public class EvenOdd {
-
     public static void main(String args[]) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Welcome to Even/Odd checker ! \nEnter number to check even or odd \nEnter 0 to exit");
