@@ -4,7 +4,7 @@ public class SimpleCalculator {
     public static void main(String args[]) {
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("-------------Welcome to simple calculator-------------");
+        System.out.println("--------------Welcome to simple calculator--------------");
         System.out.print("Enter the first number: ");
         double num1 = sc.nextDouble();
 
