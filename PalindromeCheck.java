@@ -10,8 +10,8 @@ public class PalindromeCheck {
     public static void main(String[] args) {
         String text = "madam";
         if (isPalindrome(text))
-            System.out.print(text + " is a palindrome");
+            System.out.println(text + " is a palindrome");
         else
-            System.out.print(text + " is not a palindrome");
+            System.out.println(text + " is not a palindrome");
     }
 }
